@@ -39,7 +39,8 @@ class GeneticDrawing:
                 print("Stage ", s+1, ". Generation ", g+1, "/", generations)
                 if show_progress_imgs is True:
                     #plt.imshow(sampling_mask, cmap='gray')
-                    plt.imshow(self.myDNA.get_cached_image(), cmap='gray')
+                    plt.imshow(image2np(self.myDNA.get_cached_image()), cmap='gray')
+                    #plt.imshow(self.myDNA.get_cached_image(), cmap='gray')
                     plt.show()
             self.imgBuffer.append(self.myDNA.get_cached_image())
         return self.myDNA.get_cached_image()
